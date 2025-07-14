@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockchain BENIN Charity</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+  <header class="bg-blue-600 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Blockchain BENIN Charity</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Accueil</a>
+        <a href="projects.html" class="hover:underline">Projets</a>
+        <a href="donate.html" class="hover:underline">Don</a>
+        <a href="apropos.html" class="hover:underline">À propos</a>
+        <a href="gallery.html" class="hover:underline">Galerie</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main class="flex-grow">
+    <section id="home" class="p-8 text-center bg-gray-100">
+      <h2 class="text-3xl font-bold mb-4">Bienvenue sur Blockchain BENIN Charity</h2>
+      <p class="text-lg">Blockchain BENIN Charity est la branche caritative du projet Blockchain BENIN. Elle utilise la technologie blockchain pour réaliser des actions humanitaires transparentes, traçables et impactantes. 
+        À travers des campagnes de dons et des actions solidaires, l’objectif est de soutenir les populations vulnérables et vulgariser la blockchain au Bénin.</p>
+    </section>
+
+    <section id="projects" class="p-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">Objectifs principaux</h2>
+      <ul class="object">
+         <li>Aider les populations défavorisées à travers des projets sociaux.</li>
+         <li>Promouvoir l’usage de la blockchain dans les œuvres sociales.</li>
+         <li>Mobiliser les communautés Web3 & Web2 pour le bien commun.</li>
+      </ul>
+    </section>
+
+    <section id="projects" class="p-8 text-center">
+      <h2 class="text-3xl font-bold mb-4">Nos Projets</h2>
+      <div class="grid md:grid-cols-2 gap-6 mt-4" id="projectList"></div>
+      <a href="projects.html" class="hover:underline ">Voir plus...</a>
+    </section>
+    
+    
+    <section id="gallery" class="p-8 text-center bg-gray-100">
+      <h2 class="text-3xl font-bold mb-4">Galerie</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-4">
+        <img src="images/  " alt="4" class="rounded shadow">
+        <img src="images/  " alt="3" class="rounded shadow">
+        <img src="images/  " alt="2" class="rounded shadow">
+        <img src="images/  " alt="1" class="rounded shadow">
+        <a href="gallery.html" class="hover:underline text-center">Voir plus...</a>
+      </div>
+    </section>
+    
+  </main>
+  <footer class="bg-blue-600 text-white p-4 text-center">
+    <p>&copy; 2025 BENIN Charity. Tous droits réservés.</p>
+  </footer>
+  <script>
+    const projects = [
+      { title: 'Eau potable', description: 'Installation de puits dans 3 villages', collecte: 0 },
+      { title: 'Scolarisation', description: '100 enfants avec kits scolaires', collecte: 0 }
+    ];
+    const projectList = document.getElementById('projectList');
+    projects.forEach(proj => {
+      const div = document.createElement('div');
+      div.className = 'p-4 border rounded shadow';
+      div.innerHTML = `
+        <h3 class="text-xl font-bold">${proj.title}</h3>
+        <p>${proj.description}</p>
+        <p class="text-sm text-green-600">Collecté : ${proj.collecte}%</p>
+      `;
+      projectList.appendChild(div);
+    });
+    
+  </script>
+</body>
+</html>

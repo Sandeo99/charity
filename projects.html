@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockchain BENIN Charity</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+  <header class="bg-blue-600 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Blockchain BENIN Charity</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Accueil</a>
+        <a href="projects.html" class="hover:underline">Projets</a>
+        <a href="donate.html" class="hover:underline">Don</a>
+        <a href="apropos.html" class="hover:underline">À propos</a>
+        <a href="gallery.html" class="hover:underline">Galerie</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="projects" class="p-8 text-center">
+    <h2 class="text-2xl font-semibold mb-4">Nos Projets</h2>
+    <p>Nous sommes dédiés à aider ceux qui en ont besoin. Découvrez nos projets caritatifs qui visent à améliorer la vie des personnes vulnérables et à créer un impact positif dans nos communautés. 
+      Chaque projet est une étape vers un monde meilleur, et nous sommes reconnaissants pour votre soutien et votre implication. 
+      Ensemble, nous pouvons faire une différence ! </p>
+    <div class="grid md:grid-cols-2 gap-6 mt-4" id="projectList"></div>
+  </section>
+
+</main>
+<footer class="bg-blue-600 text-white p-4 text-center">
+  <p>&copy; 2025 BENIN Charity. Tous droits réservés.</p>
+</footer>
+<script>
+  const projects = [
+    { title: 'Eau potable', description: 'Installation de puits dans 3 villages', collecte: 0 },
+    { title: 'Scolarisation', description: '100 enfants avec kits scolaires', collecte: 0 },
+    { title: 'Santé', description: 'Campagne de dépistage et de don de sang', collecte: 0 },
+    { title: 'Environnement', description: 'Salubrité et campagne verte', collecte: 0 }
+  ];
+  const projectList = document.getElementById('projectList');
+  projects.forEach(proj => {
+    const div = document.createElement('div');
+    div.className = 'p-4 border rounded shadow';
+    div.innerHTML = `
+      <h3 class="text-xl font-bold">${proj.title}</h3>
+      <p>${proj.description}</p>
+      <p class="text-sm text-green-600">Collecté : ${proj.collecte}%</p>
+    `;
+    projectList.appendChild(div);
+  });
+</script>
+</body>
+</html>

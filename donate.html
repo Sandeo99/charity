@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockchain BENIN Charity</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="flex flex-col min-h-screen">
+  <header class="bg-blue-600 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Blockchain BENIN Charity</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Accueil</a>
+        <a href="projects.html" class="hover:underline">Projets</a>
+        <a href="donate.html" class="hover:underline">Don</a>
+        <a href="apropos.html" class="hover:underline">À propos</a>
+        <a href="gallery.html" class="hover:underline">Galerie</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="donate" class="p-8 text-center bg-gray-100">
+    <h2 class="text-2xl font-semibold mb-4">Nous faire un don</h2>
+    <div class="flex flex-wrap gap-4 mt-4 text-center">
+      <p>Votre soutien est précieux ! En faisant un don, vous contribuez à notre mission et nous aidez à poursuivre nos objectifs. Chaque contribution, quelle que soit sa taille, compte et nous permet de continuer à faire une différence.
+         Merci de votre générosité et de votre confiance en nous ! </p>
+      <button onclick="simulatePayment('mobile')" class="bg-green-600 text-white px-10 py-2 rounded">Mobile Money</button>
+      <button onclick="simulatePayment('card')" class="bg-blue-600 text-white px-10 py-2 rounded">Carte bancaire</button>
+      <button onclick="simulatePayment('crypto')" class="bg-yellow-600 text-white px-10 py-2 rounded">Crypto</button>
+    </div>
+  </section>
+
+</main>
+<footer class="bg-blue-600 text-white p-4 text-center">
+  <p>&copy; 2025 BENIN Charity. Tous droits réservés.</p>
+</footer>
+<script>
+  
+  function simulatePayment(method) {
+    alert(`Simulation de paiement via ${method.toUpperCase()}... (Pas encore connecté à une API)`);
+  }
+</script>
+</body>
+</html>
